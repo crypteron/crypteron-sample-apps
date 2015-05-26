@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Name="OrderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="OrderItem" Type="nvarchar" MaxLength="120" />
+          <Property Name="Timestamp" Type="datetime" />
+          <Property Name="CustomerName" Type="nvarchar" MaxLength="120" />
+          <Property Name="Secure_CreditCardNumber" Type="nvarchar" MaxLength="120" />
+          <Property Name="Secure_SocialSecurityNumber" Type="varbinary" MaxLength="120" />
+          <Property Name="PIN" Type="nvarchar" MaxLength="120" />
+        </EntityType>
+        <Function Name="usp_SearchUserByName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UsernamePrefix" Type="nvarchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="DatabaseModelStoreContainer">
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DatabaseModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="PlainDbContext" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Users" EntityType="DatabaseModel.User" />
+          <FunctionImport Name="usp_SearchUserByName" EntitySet="Users" ReturnType="Collection(DatabaseModel.User)">
+            <Parameter Name="UsernamePrefix" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Type="Int32" Name="OrderId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="OrderItem" MaxLength="120" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Timestamp" Precision="3" />
+          <Property Type="String" Name="CustomerName" MaxLength="120" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Secure_CreditCardNumber" MaxLength="120" FixedLength="false" Unicode="true" />
+          <Property Type="Binary" Name="Secure_SocialSecurityNumber" MaxLength="120" FixedLength="false" />
+          <Property Type="String" Name="Secure_LegacyPIN" MaxLength="120" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <ComplexType Name="usp_SearchUserByName_Result">
+          <Property Type="Int32" Name="OrderId" Nullable="false" />
+          <Property Type="String" Name="OrderItem" Nullable="true" MaxLength="120" />
+          <Property Type="DateTime" Name="Timestamp" Nullable="true" Precision="23" />
+          <Property Type="String" Name="CustomerName" Nullable="true" MaxLength="120" />
+          <Property Type="String" Name="Secure_CreditCardNumber" Nullable="true" MaxLength="120" />
+          <Property Type="Binary" Name="Secure_SocialSecurityNumber" Nullable="true" MaxLength="120" />
+          <Property Type="String" Name="PIN" Nullable="true" MaxLength="120" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DatabaseModelStoreContainer" CdmEntityContainer="PlainDbContext">
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="DatabaseModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Secure_LegacyPIN" ColumnName="PIN" />
+                <ScalarProperty Name="Secure_SocialSecurityNumber" ColumnName="Secure_SocialSecurityNumber" />
+                <ScalarProperty Name="Secure_CreditCardNumber" ColumnName="Secure_CreditCardNumber" />
+                <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+                <ScalarProperty Name="OrderItem" ColumnName="OrderItem" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="usp_SearchUserByName" FunctionName="DatabaseModel.Store.usp_SearchUserByName">
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
