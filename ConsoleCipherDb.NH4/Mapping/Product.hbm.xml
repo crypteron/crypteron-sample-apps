@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="ConsoleCipherDbNh4"
+                   namespace="Crypteron.SampleApps.ConsoleCipherDbNh4.Domain">
+
+  <class name="NUser" table="NUsers">
+    <id name="OrderId">
+      <generator class="native" />
+    </id>
+    <property name="OrderItem" />
+    <property name="Timestamp" />
+    <property name="CustomerName" />
+    <property name="SecureSearch_CreditCardNumber" />
+    <property name="Secure_SocialSecurityNumber" />
+    <property name="Secure_LegacyPIN" column="PIN" />
+  </class>
+
+  <sql-query name="usp_SearchUserByName" callable="true">
+    <query-param name="UsernamePrefix" type="string"/>
+    <!-- return type must be an NHibernate mapped entity -->
+    <return class="NUser"/>
+
+    exec usp_SearchUserByName @UsernamePrefix=:UsernamePrefix
+  </sql-query>
+</hibernate-mapping>

@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{BC448B4F-B1FB-47D9-8104-14D5ECA455F0}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleCipherStor", "ConsoleCipherStor\ConsoleCipherStor.csproj", "{A6496431-59B4-4227-A4B7-5642B29C1622}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleCipherObject", "ConsoleCipherObject\ConsoleCipherObject.csproj", "{342E6494-4750-4F18-A7C0-82FC95D5BDBD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleCipherDb.NH4", "ConsoleCipherDb.NH4\ConsoleCipherDb.NH4.csproj", "{C6F43324-8891-40E0-BF52-625F04F5751D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleCipherDb.EF6.CodeFirst", "ConsoleCipherDb.EF6.CodeFirst\ConsoleCipherDb.EF6.CodeFirst.csproj", "{57508623-4C2E-4CC2-8517-75059F9929C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleCipherDb.EF6.DbFirst", "ConsoleCipherDb.EF6.DbFirst\ConsoleCipherDb.EF6.DbFirst.csproj", "{C2C44066-51A8-4C35-904D-94CD7B8F3654}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6496431-59B4-4227-A4B7-5642B29C1622}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6496431-59B4-4227-A4B7-5642B29C1622}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6496431-59B4-4227-A4B7-5642B29C1622}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6496431-59B4-4227-A4B7-5642B29C1622}.Release|Any CPU.Build.0 = Release|Any CPU
+		{342E6494-4750-4F18-A7C0-82FC95D5BDBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{342E6494-4750-4F18-A7C0-82FC95D5BDBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{342E6494-4750-4F18-A7C0-82FC95D5BDBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{342E6494-4750-4F18-A7C0-82FC95D5BDBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6F43324-8891-40E0-BF52-625F04F5751D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6F43324-8891-40E0-BF52-625F04F5751D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6F43324-8891-40E0-BF52-625F04F5751D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6F43324-8891-40E0-BF52-625F04F5751D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57508623-4C2E-4CC2-8517-75059F9929C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57508623-4C2E-4CC2-8517-75059F9929C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57508623-4C2E-4CC2-8517-75059F9929C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57508623-4C2E-4CC2-8517-75059F9929C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2C44066-51A8-4C35-904D-94CD7B8F3654}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2C44066-51A8-4C35-904D-94CD7B8F3654}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2C44066-51A8-4C35-904D-94CD7B8F3654}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2C44066-51A8-4C35-904D-94CD7B8F3654}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {238A3067-24FA-46A0-BC4F-0C733DF42A5A}
+	EndGlobalSection
+EndGlobal

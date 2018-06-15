@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFrameworks>net461</TargetFrameworks>
+    <Description>Simple console demo for Crypteron CipherDB for Entity Framework 6.x database encryption and key management</Description>
+    <Company>Crypteron Inc</Company>
+    <Product>Crypteron.Demos.CipherDB.EF6.Console</Product>
+    <Version>2.0.0</Version>
+    <PackageId>Crypteron.Demos.CipherDB.EF6.Console</PackageId>
+    <Authors>Crypteron</Authors>
+    <Copyright>Copyright ©  2013</Copyright>
+    <PackageProjectUrl>https://www.crypteron.com</PackageProjectUrl>
+    <AssemblyName>ConsoleCipherDbEf6CodeFirst</AssemblyName>
+    <RootNamespace>Crypteron.SampleApps.ConsoleCipherDbEf6CodeFirst</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DefineConstants>$(DefineConstants);EF6CODEFIRST</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\Common\App.cs" Link="App.cs" />
+    <Compile Include="..\Common\ProcessCustomer.cs" Link="ProcessCustomer.cs" />
+    <Compile Include="..\Common\UserRandomizer.cs" Link="UserRandomizer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CipherDB.EF6" Version="2018.6.1" />
+    <PackageReference Include="EntityFramework" Version="6.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="CipherDbCodeFirst.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="CipherDbCodeFirst_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
