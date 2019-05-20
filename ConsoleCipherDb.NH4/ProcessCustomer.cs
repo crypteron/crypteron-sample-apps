@@ -261,15 +261,13 @@ namespace Crypteron.SampleApps.ConsoleCipherDbNh4
         private NUser CreateRandomUser()
         {
             var rndUser = new NUser();
-            var r = new UserRandomizer();
-
             rndUser.OrderId = 0; //db overwrites this
-            rndUser.OrderItem = r.GetRandomItem();
-            rndUser.CustomerName = r.GetRandomNames();
+            rndUser.OrderItem = UserRandomizer.GetRandomItem();
+            rndUser.CustomerName = UserRandomizer.GetRandomNames();
             rndUser.Timestamp = Randomizer.GetRandomTime();
-            rndUser.SecureSearch_CreditCardNumber = r.GetRandomCC();
-            rndUser.Secure_LegacyPIN = r.GetRandomPIN();
-            rndUser.Secure_SocialSecurityNumber = Encoding.UTF8.GetBytes(r.GetRandomSSN());
+            rndUser.SecureSearch_CreditCardNumber = UserRandomizer.GetRandomCC();
+            rndUser.Secure_LegacyPIN = UserRandomizer.GetRandomPIN();
+            rndUser.Secure_SocialSecurityNumber = Encoding.UTF8.GetBytes(UserRandomizer.GetRandomSSN());
             return rndUser;
         }
 

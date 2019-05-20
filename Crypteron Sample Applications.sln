@@ -9,6 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{BC448B
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
+EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleCipherStor", "ConsoleCipherStor\ConsoleCipherStor.csproj", "{A6496431-59B4-4227-A4B7-5642B29C1622}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleCipherObject", "ConsoleCipherObject\ConsoleCipherObject.csproj", "{342E6494-4750-4F18-A7C0-82FC95D5BDBD}"
@@ -18,6 +19,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleCipherDb.EF6.CodeFirst", "ConsoleCipherDb.EF6.CodeFirst\ConsoleCipherDb.EF6.CodeFirst.csproj", "{57508623-4C2E-4CC2-8517-75059F9929C8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleCipherDb.EF6.DbFirst", "ConsoleCipherDb.EF6.DbFirst\ConsoleCipherDb.EF6.DbFirst.csproj", "{C2C44066-51A8-4C35-904D-94CD7B8F3654}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleCipherObject.EFCore", "ConsoleCipherObject.EFCore\ConsoleCipherObject.EFCore.csproj", "{D2EF43C7-2412-4CAE-BEF1-5065C83B7EDF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +48,10 @@ Global
 		{C2C44066-51A8-4C35-904D-94CD7B8F3654}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2C44066-51A8-4C35-904D-94CD7B8F3654}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2C44066-51A8-4C35-904D-94CD7B8F3654}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2EF43C7-2412-4CAE-BEF1-5065C83B7EDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2EF43C7-2412-4CAE-BEF1-5065C83B7EDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2EF43C7-2412-4CAE-BEF1-5065C83B7EDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2EF43C7-2412-4CAE-BEF1-5065C83B7EDF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
