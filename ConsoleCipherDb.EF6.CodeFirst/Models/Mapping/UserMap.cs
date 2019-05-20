@@ -10,17 +10,13 @@ namespace Crypteron.SampleApps.ConsoleCipherDbEf6CodeFirst.Models.Mapping
             HasKey(t => t.OrderId);
 
             // Properties
-            Property(t => t.OrderItem)
-                .HasMaxLength(120);
+            Property(t => t.OrderItem);
 
-            Property(t => t.CustomerName)
-                .HasMaxLength(120);
+            Property(t => t.CustomerName);
 
-            Property(t => t.Secure_SocialSecurityNumber)
-                .HasMaxLength(120);
+            Property(t => t.Secure_SocialSecurityNumber);
 
-            Property(t => t.Secure_LegacyPIN)
-                .HasMaxLength(120);
+            Property(t => t.Secure_LegacyPIN);
 
             // Table & Column Mappings
             ToTable("Users");

@@ -4,7 +4,6 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using Crypteron.Utility;
 using Crypteron.CipherStor;
 using Microsoft.WindowsAzure.Storage;
 using Microsoft.WindowsAzure.Storage.Blob;
@@ -280,7 +279,7 @@ namespace Crypteron.SampleApps.ConsoleCipherStor
             }
         }
 
-        private void HandleProgressEvent(object sender, CipherCoreEventArgs e)
+        private void HandleProgressEvent(object sender, CipherStorEventArgs e)
         {
             Console.WriteLine("Event: Processed {0} bytes.", e.BytesTransferred);
         }

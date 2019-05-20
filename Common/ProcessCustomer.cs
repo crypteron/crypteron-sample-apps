@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
 using System.Text;
-using Crypteron.Entropy;
 using System.Diagnostics;
+using Crypteron.Internal.Entropy;
 
 // This way to minimize code duplication
 #if EF6CODEFIRST

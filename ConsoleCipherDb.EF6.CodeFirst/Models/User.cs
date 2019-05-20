@@ -18,7 +18,7 @@ namespace Crypteron.SampleApps.ConsoleCipherDbEf6CodeFirst.Models
         public string CustomerName { get; set; }
 
         // Searchable encryption also supported with this syntax:
-		// [Secure(Mode.Searchable)]
+        // [Secure(Opt.Search)]
         public string SecureSearch_CreditCardNumber { get; set; }
         
         public byte[] Secure_SocialSecurityNumber { get; set; }

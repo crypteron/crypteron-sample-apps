@@ -22,15 +22,15 @@
     <Compile Include="..\Common\UserRandomizer.cs" Link="UserRandomizer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="CipherDB.EF6" Version="2018.6.1" />
+    <PackageReference Include="CipherDB.EF6" Version="2019.6.0" />
     <PackageReference Include="EntityFramework" Version="6.2.0" />
   </ItemGroup>
   <ItemGroup>
     <None Update="CipherDbCodeFirst.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="CipherDbCodeFirst_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 </Project>

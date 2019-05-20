@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Crypteron.Entropy;
+using Crypteron.Internal.Entropy;
 using Crypteron.SampleApps.CommonCode;
 using Crypteron.SampleApps.ConsoleCipherDbNh4.Domain;
 using NHibernate;

@@ -33,7 +33,7 @@
     <EmbeddedResource Include="Mapping\Product.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="CipherDB.NH4" Version="2018.6.1" />
+    <PackageReference Include="CipherDB.NH4" Version="2019.6.0" />
     <PackageReference Include="Iesi.Collections" Version="4.0.4" />
     <PackageReference Include="NHibernate" Version="4.1.2.4000" />
   </ItemGroup>

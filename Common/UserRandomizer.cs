@@ -1,4 +1,4 @@
-﻿using Crypteron.Entropy;
+﻿using Crypteron.Internal.Entropy;
 
 namespace Crypteron.SampleApps.CommonCode
 {
