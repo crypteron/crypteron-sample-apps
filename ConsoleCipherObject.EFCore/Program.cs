@@ -16,11 +16,10 @@ namespace ConsoleCipherObject.EFCore
         {
             var currDir = Directory.GetCurrentDirectory();
 
-            var builder = new ConfigurationBuilder()
+            Configuration = new ConfigurationBuilder()
                 .SetBasePath(currDir)
-                .AddJsonFile("appsettings.json");
-
-            Configuration = builder.Build();
+                .AddJsonFile("appsettings.json")
+                .Build();
 
             DbConnectionString = Configuration["ConnectionStrings:SqlDatabase"];
 
@@ -31,6 +30,12 @@ namespace ConsoleCipherObject.EFCore
             }
 
             Crypteron.CrypteronConfig.Config.MyCrypteronAccount.AppSecret = Configuration["CrypteronConfig:MyCrypteronAccount:AppSecret"];
+
+            // Showing additional Crypteron settings, adapt to your situation.
+            // Settings explained at https://www.crypteron.com/developers-guide/cipherdb/dotnet/#Configuration_settings
+            // Uncomment in appsettings.json and just below
+            //Crypteron.CrypteronConfig.Config.CommonConfig.AllowNullsInSecureFields =
+            //   bool.Parse(Configuration["CrypteronConfig:CommonConfig:AllowNullsInSecureFields"]);
         }
 
         public static void Main()
@@ -70,7 +75,7 @@ namespace ConsoleCipherObject.EFCore
                 }
             }
 
-            Console.WriteLine("Press enter to exit");
+            Console.WriteLine("Press enter to exit ...");
             Console.ReadLine();
         }
     }
