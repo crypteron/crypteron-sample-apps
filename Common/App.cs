@@ -1,17 +1,12 @@
 ﻿using System;
 
-// This way to minimize code duplication without complex sub-classes 
-// and interfaces
+// This way to minimize code duplication
 #if EF6CODEFIRST
-using Crypteron.SampleApps.ConsoleCipherDbEf6CodeFirst;
+using Crypteron.SampleApps.EF6.CodeFirst;
 #endif
 
-#if ConsoleDbFirst
-using Crypteron.SampleApps.ConsoleCipherDbEfDbFirst;
-#endif
-
-#if NHIBERNATE
-using Crypteron.SampleApps.ConsoleCipherDbNh4;
+#if EF6DBFIRST
+using Crypteron.SampleApps.EF6.DbFirst;
 #endif
 
 namespace Crypteron.SampleApps.CommonCode

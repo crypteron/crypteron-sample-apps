@@ -64,6 +64,6 @@ packages/
 
 *.cipherstor
 .vs/
-ConsoleCipherStor/FileStorage/decrypt-multiple-files/
-ConsoleCipherStor/FileStorage/encrypt-multiple-files/
-ConsoleCipherStor/FileStorage/*decrypted*
+Files,Streams/FileStorage/decrypt-multiple-files/
+Files,Streams/FileStorage/encrypt-multiple-files/
+Files,Streams/FileStorage/*decrypted*

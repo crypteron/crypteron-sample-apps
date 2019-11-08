@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFrameworks>net461;netcoreapp2.1</TargetFrameworks>
+    <Description>Simple console demo for Crypteron CipherStor for files, streams and cloud storage encryption and key management</Description>
+    <Company>Crypteron Inc</Company>
+    <Product>Crypteron.Demos.CipherStor.Console</Product>
+    <Version>2.0.0</Version>
+    <PackageId>Crypteron.Demos.CipherStor.Console</PackageId>
+    <Authors>Crypteron</Authors>
+    <Copyright>Copyright ©  2013</Copyright>
+    <PackageProjectUrl>https://www.crypteron.com</PackageProjectUrl>
+    <AssemblyName></AssemblyName>
+    <RootNamespace>Crypteron.SampleApps.CipherStor</RootNamespace>
+  </PropertyGroup>  
+  <ItemGroup>
+    <PackageReference Include="CipherStor" Version="2019.11.1" />
+    <PackageReference Include="WindowsAzure.Storage" Version="9.3.3" />
+  </ItemGroup>
+</Project>

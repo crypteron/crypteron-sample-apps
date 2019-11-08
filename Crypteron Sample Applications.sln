@@ -1,26 +1,27 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2026
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{BC448B4F-B1FB-47D9-8104-14D5ECA455F0}"
-	ProjectSection(SolutionItems) = preProject
-		.nuget\NuGet.Config = .nuget\NuGet.Config
-		.nuget\NuGet.exe = .nuget\NuGet.exe
-		.nuget\NuGet.targets = .nuget\NuGet.targets
-	EndProjectSection
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EntityFramework", "EntityFramework", "{308F8547-0230-4DF7-AC93-845D2D66216C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleCipherStor", "ConsoleCipherStor\ConsoleCipherStor.csproj", "{A6496431-59B4-4227-A4B7-5642B29C1622}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF6.CodeFirst", "EntityFramework\EF6.CodeFirst\EF6.CodeFirst.csproj", "{735CE3F9-D77F-4B98-A76E-3230669E522E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleCipherObject", "ConsoleCipherObject\ConsoleCipherObject.csproj", "{342E6494-4750-4F18-A7C0-82FC95D5BDBD}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files,Streams", "Files,Streams", "{9BBDEAD2-3B62-46FA-93F4-15FBC2E3AA12}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleCipherDb.NH4", "ConsoleCipherDb.NH4\ConsoleCipherDb.NH4.csproj", "{C6F43324-8891-40E0-BF52-625F04F5751D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ObjectEncryption", "ObjectEncryption", "{3C221631-F5DD-4F4F-BDF5-0FE5F74F9F47}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleCipherDb.EF6.CodeFirst", "ConsoleCipherDb.EF6.CodeFirst\ConsoleCipherDb.EF6.CodeFirst.csproj", "{57508623-4C2E-4CC2-8517-75059F9929C8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF6.DbFirst", "EntityFramework\EF6.DbFirst\EF6.DbFirst.csproj", "{C2C44066-51A8-4C35-904D-94CD7B8F3654}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleCipherDb.EF6.DbFirst", "ConsoleCipherDb.EF6.DbFirst\ConsoleCipherDb.EF6.DbFirst.csproj", "{C2C44066-51A8-4C35-904D-94CD7B8F3654}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CipherStorSample", "Files,Streams\CipherStorSample.csproj", "{73918FF9-982F-4E9D-9852-778986ECAD80}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleCipherObject.EFCore", "ConsoleCipherObject.EFCore\ConsoleCipherObject.EFCore.csproj", "{D2EF43C7-2412-4CAE-BEF1-5065C83B7EDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CipherObjectSample", "ObjectEncryption\CipherObjectSample.csproj", "{C3BAA8B9-B3A9-419C-822D-332476A74F71}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCore2", "EntityFramework\EFCore2\EFCore2.csproj", "{3F1C4C1D-4AE2-4065-8E05-5C1DA2291768}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF6.CodeFirst.NETCore3.0", "EntityFramework\EF6.CodeFirst.NETCore3.0\EF6.CodeFirst.NETCore3.0.csproj", "{17A7314F-30AF-4716-A3E5-D0B9DC83B38E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCore3", "EntityFramework\EFCore3\EFCore3.csproj", "{4C139196-C809-4A9A-AACD-A92DBAB72B05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,33 +29,46 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A6496431-59B4-4227-A4B7-5642B29C1622}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A6496431-59B4-4227-A4B7-5642B29C1622}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A6496431-59B4-4227-A4B7-5642B29C1622}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A6496431-59B4-4227-A4B7-5642B29C1622}.Release|Any CPU.Build.0 = Release|Any CPU
-		{342E6494-4750-4F18-A7C0-82FC95D5BDBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{342E6494-4750-4F18-A7C0-82FC95D5BDBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{342E6494-4750-4F18-A7C0-82FC95D5BDBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{342E6494-4750-4F18-A7C0-82FC95D5BDBD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C6F43324-8891-40E0-BF52-625F04F5751D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C6F43324-8891-40E0-BF52-625F04F5751D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C6F43324-8891-40E0-BF52-625F04F5751D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C6F43324-8891-40E0-BF52-625F04F5751D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{57508623-4C2E-4CC2-8517-75059F9929C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{57508623-4C2E-4CC2-8517-75059F9929C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{57508623-4C2E-4CC2-8517-75059F9929C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{57508623-4C2E-4CC2-8517-75059F9929C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{735CE3F9-D77F-4B98-A76E-3230669E522E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{735CE3F9-D77F-4B98-A76E-3230669E522E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{735CE3F9-D77F-4B98-A76E-3230669E522E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{735CE3F9-D77F-4B98-A76E-3230669E522E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C2C44066-51A8-4C35-904D-94CD7B8F3654}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C2C44066-51A8-4C35-904D-94CD7B8F3654}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2C44066-51A8-4C35-904D-94CD7B8F3654}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2C44066-51A8-4C35-904D-94CD7B8F3654}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D2EF43C7-2412-4CAE-BEF1-5065C83B7EDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D2EF43C7-2412-4CAE-BEF1-5065C83B7EDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D2EF43C7-2412-4CAE-BEF1-5065C83B7EDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D2EF43C7-2412-4CAE-BEF1-5065C83B7EDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73918FF9-982F-4E9D-9852-778986ECAD80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73918FF9-982F-4E9D-9852-778986ECAD80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73918FF9-982F-4E9D-9852-778986ECAD80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73918FF9-982F-4E9D-9852-778986ECAD80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3BAA8B9-B3A9-419C-822D-332476A74F71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3BAA8B9-B3A9-419C-822D-332476A74F71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3BAA8B9-B3A9-419C-822D-332476A74F71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3BAA8B9-B3A9-419C-822D-332476A74F71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F1C4C1D-4AE2-4065-8E05-5C1DA2291768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F1C4C1D-4AE2-4065-8E05-5C1DA2291768}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F1C4C1D-4AE2-4065-8E05-5C1DA2291768}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F1C4C1D-4AE2-4065-8E05-5C1DA2291768}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17A7314F-30AF-4716-A3E5-D0B9DC83B38E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17A7314F-30AF-4716-A3E5-D0B9DC83B38E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17A7314F-30AF-4716-A3E5-D0B9DC83B38E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17A7314F-30AF-4716-A3E5-D0B9DC83B38E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C139196-C809-4A9A-AACD-A92DBAB72B05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C139196-C809-4A9A-AACD-A92DBAB72B05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C139196-C809-4A9A-AACD-A92DBAB72B05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C139196-C809-4A9A-AACD-A92DBAB72B05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{735CE3F9-D77F-4B98-A76E-3230669E522E} = {308F8547-0230-4DF7-AC93-845D2D66216C}
+		{C2C44066-51A8-4C35-904D-94CD7B8F3654} = {308F8547-0230-4DF7-AC93-845D2D66216C}
+		{73918FF9-982F-4E9D-9852-778986ECAD80} = {9BBDEAD2-3B62-46FA-93F4-15FBC2E3AA12}
+		{C3BAA8B9-B3A9-419C-822D-332476A74F71} = {3C221631-F5DD-4F4F-BDF5-0FE5F74F9F47}
+		{3F1C4C1D-4AE2-4065-8E05-5C1DA2291768} = {308F8547-0230-4DF7-AC93-845D2D66216C}
+		{17A7314F-30AF-4716-A3E5-D0B9DC83B38E} = {308F8547-0230-4DF7-AC93-845D2D66216C}
+		{4C139196-C809-4A9A-AACD-A92DBAB72B05} = {308F8547-0230-4DF7-AC93-845D2D66216C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {238A3067-24FA-46A0-BC4F-0C733DF42A5A}

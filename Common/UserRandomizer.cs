@@ -36,5 +36,12 @@ namespace Crypteron.SampleApps.CommonCode
         {
             return $"{Randomizer.GetRandom(10000):D4}-{Randomizer.GetRandom(10000):D4}-{Randomizer.GetRandom(10000):D4}-{Randomizer.GetRandom(10000):D4}";
         }
+
+        public static byte[] GetRandomBytes()
+        {
+            var randomBytes = new byte[20];
+            Crypteron.Internal.CryptoAL.RandomNumberGen.Instance.GetBytes(randomBytes);
+            return randomBytes;
+        }
     }
 }

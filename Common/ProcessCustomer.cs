@@ -6,11 +6,11 @@ using Crypteron.Internal.Entropy;
 
 // This way to minimize code duplication
 #if EF6CODEFIRST
-using Crypteron.SampleApps.ConsoleCipherDbEf6CodeFirst.Models;
+using Crypteron.SampleApps.EF6.CodeFirst.Models;
 #endif
 
 #if EF6DBFIRST
-using Crypteron.SampleApps.ConsoleCipherDbEf6DbFirst;
+using Crypteron.SampleApps.EF6.DbFirst;
 #endif
 
 namespace Crypteron.SampleApps.CommonCode
@@ -291,15 +291,16 @@ namespace Crypteron.SampleApps.CommonCode
 
         private User CreateRandomUser()
         {
-            var rndUser = new User();
-
-            rndUser.OrderId = 0; //db overwrites this
-            rndUser.OrderItem = UserRandomizer.GetRandomItem();
-            rndUser.CustomerName = UserRandomizer.GetRandomNames();
-            rndUser.Timestamp = Randomizer.GetRandomTime();
-            rndUser.SecureSearch_CreditCardNumber = UserRandomizer.GetRandomCC();
-            rndUser.Secure_LegacyPIN = UserRandomizer.GetRandomPIN();
-            rndUser.Secure_SocialSecurityNumber = Encoding.UTF8.GetBytes(UserRandomizer.GetRandomSSN());
+            var rndUser = new User
+            {
+                OrderId = 0, //db overwrites this
+                OrderItem = UserRandomizer.GetRandomItem(),
+                CustomerName = UserRandomizer.GetRandomNames(),
+                Timestamp = Randomizer.GetRandomTime(),
+                SecureSearch_CreditCardNumber = UserRandomizer.GetRandomCC(),
+                Secure_LegacyPIN = UserRandomizer.GetRandomPIN(),
+                Secure_SocialSecurityNumber = Encoding.UTF8.GetBytes(UserRandomizer.GetRandomSSN())
+            };
             return rndUser;
         }
 
