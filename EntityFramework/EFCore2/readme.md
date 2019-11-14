@@ -2,6 +2,59 @@
 
 This is a sample application showing how to use Crypteron CipherDb to encrypt sensitive data using strong encryption and robust key management with Entity Framework Core 2.x. This sample uses the SQLite provider for Entity Framework but Crypteron CipherDb can work with any database provider compatible with EF Core (e.g. Azure SQL, MySQL, PostgreSQL, Cosmos Db etc.)
 
+## Integration
+
+You can see the integration points here
+
+### Mark data as sensitive
+
+In typical Crypteron fashion, put `[Secure]` in front the data bearing properties. For example here:
+
+```
+public class User
+{
+    ...
+
+    [Secure(Opt.Search)]
+    public string CreditCardNumber { get; set; }
+
+    [Secure]
+    public string SocialSecurityNumber { get; set; }
+
+    [Secure]
+    public byte[] FacePhoto { get; set; }
+}
+```
+
+### Activate Crypteron CipherDB on EF Core
+
+Call `CipherDb.EFCore3.Entities.Activate` on your EF Core DbContext as follows ...
+
+```
+public class AppDbContext : DbContext
+{
+    ...
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+
+        // NOTE: Crypteron.CrypteronConfig.Config.MyCrypteronAccount.AppSecret
+        //       must be configured before this is executed. Depending on your 
+        //       application logic, this configuration can be done using 
+        //       dependency-injection or a factory method or through 
+        //       the dbcontext's constructor
+        CipherDb.EFCore3.Entities.Activate(modelBuilder);
+    }
+}
+```
+
+### Done !
+
+That's it! You have data encryption, key management, key rotations, access control rules revocations etc all done. What typically takes months/years to design, build, test and maintain is done in under 10 minutes. 
+
+That's the power of Crypteron.
+
 ## Configuration
 
 In .NET Core, there are many ways to configure the database connection string or the Crypteron AppSecret. Plus one may have dependency injection and additional code to support EF Core tools (e.g. migrations). This illustrative sample app doesn't cover every combination so please adjust to your situation as needed. The most important thing you need to know is that the Crypteron AppSecret *must* be initialized *before* using the EF Core DbContext is used by your application or by EF Core tools.
