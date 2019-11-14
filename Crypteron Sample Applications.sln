@@ -5,23 +5,21 @@ VisualStudioVersion = 16.0.29411.108
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EntityFramework", "EntityFramework", "{308F8547-0230-4DF7-AC93-845D2D66216C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF6.CodeFirst", "EntityFramework\EF6.CodeFirst\EF6.CodeFirst.csproj", "{735CE3F9-D77F-4B98-A76E-3230669E522E}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files,Streams", "Files,Streams", "{9BBDEAD2-3B62-46FA-93F4-15FBC2E3AA12}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ObjectEncryption", "ObjectEncryption", "{3C221631-F5DD-4F4F-BDF5-0FE5F74F9F47}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF6.DbFirst", "EntityFramework\EF6.DbFirst\EF6.DbFirst.csproj", "{C2C44066-51A8-4C35-904D-94CD7B8F3654}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CipherStorSample", "Files,Streams\CipherStorSample.csproj", "{73918FF9-982F-4E9D-9852-778986ECAD80}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CipherObjectSample", "ObjectEncryption\CipherObjectSample.csproj", "{C3BAA8B9-B3A9-419C-822D-332476A74F71}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCore3", "EntityFramework\EFCore3\EFCore3.csproj", "{4C139196-C809-4A9A-AACD-A92DBAB72B05}"
+EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCore2", "EntityFramework\EFCore2\EFCore2.csproj", "{3F1C4C1D-4AE2-4065-8E05-5C1DA2291768}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF6.CodeFirst.NETCore3.0", "EntityFramework\EF6.CodeFirst.NETCore3.0\EF6.CodeFirst.NETCore3.0.csproj", "{17A7314F-30AF-4716-A3E5-D0B9DC83B38E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF6.CodeFirst", "EntityFramework\EF6.CodeFirst\EF6.CodeFirst.csproj", "{17A7314F-30AF-4716-A3E5-D0B9DC83B38E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCore3", "EntityFramework\EFCore3\EFCore3.csproj", "{4C139196-C809-4A9A-AACD-A92DBAB72B05}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF6.DbFirst", "EntityFramework\EF6.DbFirst\EF6.DbFirst.csproj", "{C2C44066-51A8-4C35-904D-94CD7B8F3654}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +27,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{735CE3F9-D77F-4B98-A76E-3230669E522E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{735CE3F9-D77F-4B98-A76E-3230669E522E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{735CE3F9-D77F-4B98-A76E-3230669E522E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{735CE3F9-D77F-4B98-A76E-3230669E522E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C2C44066-51A8-4C35-904D-94CD7B8F3654}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C2C44066-51A8-4C35-904D-94CD7B8F3654}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2C44066-51A8-4C35-904D-94CD7B8F3654}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -62,7 +56,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{735CE3F9-D77F-4B98-A76E-3230669E522E} = {308F8547-0230-4DF7-AC93-845D2D66216C}
 		{C2C44066-51A8-4C35-904D-94CD7B8F3654} = {308F8547-0230-4DF7-AC93-845D2D66216C}
 		{73918FF9-982F-4E9D-9852-778986ECAD80} = {9BBDEAD2-3B62-46FA-93F4-15FBC2E3AA12}
 		{C3BAA8B9-B3A9-419C-822D-332476A74F71} = {3C221631-F5DD-4F4F-BDF5-0FE5F74F9F47}

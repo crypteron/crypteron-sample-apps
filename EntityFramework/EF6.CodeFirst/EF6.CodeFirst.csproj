@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFrameworks>net45</TargetFrameworks>
+    <TargetFrameworks>netcoreapp3.0;net461</TargetFrameworks>
     <Description>Simple console demo for Crypteron CipherDB for Entity Framework 6.x database encryption and key management</Description>
     <Company>Crypteron Inc</Company>
     <Version>2.0.0</Version>
@@ -23,12 +23,5 @@
     <PackageReference Include="CipherDB.EF6" Version="2019.11.1" />
     <PackageReference Include="EntityFramework" Version="6.3.0" />
   </ItemGroup>
-  <ItemGroup>
-    <None Update="CipherDbCodeFirst.mdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="CipherDbCodeFirst_log.ldf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
+  
 </Project>
