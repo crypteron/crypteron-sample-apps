@@ -1,19 +1,11 @@
 ﻿using System;
-using System.Linq;
 using System.Text;
 using System.Diagnostics;
 using Crypteron.Internal.Entropy;
+using Crypteron.SampleApps.EF6.CodeFirst.PostgreSQL.Models;
+using Crypteron.SampleApps.CommonCode;
 
-// This way to minimize code duplication
-#if EF6CODEFIRST
-using Crypteron.SampleApps.EF6.CodeFirst.Models;
-#endif
-
-#if EF6DBFIRST
-using Crypteron.SampleApps.EF6.DbFirst;
-#endif
-
-namespace Crypteron.SampleApps.CommonCode
+namespace Crypteron.SampleApps.EF6.CodeFirst.PostgreSQL
 {
     public class ProcessCustomer
     {
@@ -124,7 +116,7 @@ namespace Crypteron.SampleApps.CommonCode
         {
             // Deletions can be done directly without passing 
             // through CipherDB 
-            const string rawSqlCmd = "DELETE FROM Users";
+            const string rawSqlCmd = "DELETE FROM dbo.\"Users\"";
             using (var secDb = new SecDbContext())
             {
                 secDb.Database.ExecuteSqlCommand(rawSqlCmd);
@@ -153,50 +145,6 @@ namespace Crypteron.SampleApps.CommonCode
         public void Benchmark()
         {
             Benchmark(WipeAllViaSql, CreateAuto, ReadAll, CreateAutoInsecure, ReadAllInsecure);
-        }
-
-        public void StoredProcedure()
-        {
-#if ConsoleDbFirst
-            Console.WriteLine("Enter first few characters of customer name to search:");
-            var custName = Console.ReadLine();
-
-            using (var secDbCtx = new SecDbContext())
-            {
-                // 1. The SQL Stored Proc needs to be imported into EntityFramework
-                // 2. The resulting object from the SP needs to be mapped to an 
-                //    EntityFramework entity
-                var results = secDbCtx.usp_SearchUserByName(custName);
-                foreach (var r in results)
-                    DisplayEntity(r);
-            }
-#else
-            throw new NotImplementedException("SPs work fine with CipherDB but currently demonstrated only in the EntityFramework Database First sample");
-#endif
-        }
-
-        public void EncryptedSearchServerSide()
-        {
-            // Fast searches done at database side, usually for high frequency search patterns (e.g. search by last name etc)
-            // Please read more https://www.crypteron.com/blog/practical-searchable-encryption-and-security/
-            // 
-            Console.WriteLine("For details, partial searches, fuzzy searches, please read:");
-            Console.WriteLine("    https://www.crypteron.com/blog/practical-searchable-encryption-and-security/ \n");
-            Console.WriteLine("Credit Card numbers are AES encrypted; we'll do a full speed server side search!");
-            Console.Write("Enter the full credit card to search for (including the -'s): ");
-            var ccSearchStr = Console.ReadLine();
-            using (var secDb = new SecDbContext())
-            {
-                var creditCardSearchPrefix = SecureSearch.GetPrefix(ccSearchStr);
-                // This query will take place on encrypted data at the database side
-                var usersFound = secDb.Users.Where(u => u.SecureSearch_CreditCardNumber.StartsWith(creditCardSearchPrefix));
-                if (usersFound == null || usersFound.Count() < 1)
-                    Console.WriteLine("No results found");
-                foreach (var user in usersFound)
-                {
-                    DisplayEntity(user);
-                }
-            }
         }
 
         public class ProjectedUser
