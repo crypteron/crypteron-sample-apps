@@ -1,6 +1,6 @@
-﻿# Crypteron CipherDb for Entity Framework 6.3 + Postgres
+﻿# Crypteron CipherDb for Entity Framework 6.4 + Postgres
 
-This is a sample application showing how to use Crypteron CipherDb to encrypt sensitive data using strong encryption and robust key management with Entity Framework 6.3. This sample used the PostgreSQL provider for Entity Framework but Crypteron CipherDb can work with any database provider compatible with Entity Framework (e.g. Azure SQL, MySQL, PostgreSQL, Cosmos Db etc.)
+This is a sample application showing how to use Crypteron CipherDb to encrypt sensitive data using strong encryption and robust key management with Entity Framework 6.4. This sample used the PostgreSQL provider for Entity Framework but Crypteron CipherDb can work with any database provider compatible with Entity Framework (e.g. Azure SQL, MySQL, PostgreSQL, Cosmos Db etc.)
 
 ## Run the demo
 
