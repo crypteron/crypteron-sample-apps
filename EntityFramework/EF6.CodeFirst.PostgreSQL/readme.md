@@ -4,20 +4,13 @@ This is a sample application showing how to use Crypteron CipherDb to encrypt se
 
 > This **now works on .NET Core 3.0**, opening up many cross-platform scenarios.
 
-## Sample Database 
+## Run the demo
 
-This sample uses a PostgreSQL database which should be generated the first time you run this. Depending on your environment, you might want to change the connection string inside `App.config` to better suit your needs. The connection string can be any standard Entity Framework 6 connection string; there is nothing special needed to make it Crypteron compatible.
+1. Signup for free in seconds at https://my.crypteron.com to get an `AppSecret`. Put it inside the `Program.cs` placeholder.
+2. Edit `App.config` with a valid connection string for your PostgreSQL server. The sample database is auto-created on first run if it's missing.
+3. Run the app by `dotnet run` from command terminal. Visual studio users can right-clicking the project -> debug -> start new instance
 
-### Comments
-
-Npgsql EF migrations support uses `uuid_generate_v4()` function to generate guids, enable it on your postgres server by
-
-```
-psql -U <postgres user>
-create extension "uuid-ossp";
-```
-
-## Integration
+## Integration Explained
 
 You can see the integration points here
 

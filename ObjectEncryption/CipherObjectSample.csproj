@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFrameworks>netcoreapp2.1</TargetFrameworks>
+    <TargetFrameworks>netcoreapp3.1</TargetFrameworks>
     <Description>Simple console demo for Crypteron CipherObject for object oriented encryption and key management</Description>
     <Company>Crypteron Inc</Company>
     <Product>Crypteron.Demos.CipherObject.Console</Product>
@@ -14,7 +14,7 @@
     <RootNamespace>Crypteron.SampleApps.CipherObject</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="CipherObject" Version="2019.11.1" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="CipherObject" Version="2019.12.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
 </Project>

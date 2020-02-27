@@ -53,11 +53,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CipherCore, Version=2019.11.1.0, Culture=neutral, PublicKeyToken=e0287981ec67bb47, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\CipherCore.2019.11.1\lib\net45\CipherCore.dll</HintPath>
+    <Reference Include="CipherCore, Version=2019.12.1.0, Culture=neutral, PublicKeyToken=e0287981ec67bb47, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CipherCore.2019.12.1\lib\net45\CipherCore.dll</HintPath>
     </Reference>
-    <Reference Include="CipherDb.EF6, Version=2019.11.1.0, Culture=neutral, PublicKeyToken=e0287981ec67bb47, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\CipherDB.EF6.2019.11.1\lib\net45\CipherDb.EF6.dll</HintPath>
+    <Reference Include="CipherDb.EF6, Version=2019.12.1.0, Culture=neutral, PublicKeyToken=e0287981ec67bb47, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CipherDB.EF6.2019.12.1\lib\net45\CipherDb.EF6.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.dll</HintPath>
