@@ -2,8 +2,6 @@
 
 This is a sample application showing how to use Crypteron CipherDb to encrypt sensitive data using strong encryption and robust key management with Entity Framework 6.3. This sample used the PostgreSQL provider for Entity Framework but Crypteron CipherDb can work with any database provider compatible with Entity Framework (e.g. Azure SQL, MySQL, PostgreSQL, Cosmos Db etc.)
 
-> This **now works on .NET Core 3.0**, opening up many cross-platform scenarios.
-
 ## Run the demo
 
 1. Signup for free in seconds at https://my.crypteron.com to get an `AppSecret`. Put it inside the `Program.cs` placeholder.
